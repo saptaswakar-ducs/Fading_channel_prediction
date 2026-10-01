@@ -121,31 +121,31 @@ $$
 
 where:
 
-- \(v\) = velocity in m/s
-- \(f_c\) = carrier frequency
-- \(c\) = speed of light
+- $v$ = velocity in m/s
+- $f_c$ = carrier frequency
+- $c$ = speed of light
 
 For the default parameters, the notebook reports a maximum Doppler shift of approximately **17.88 Hz**.
 
 The simulated complex channel coefficient is represented as:
 
-\[
+$$
 z(t) = \frac{1}{\sqrt{N}}\left(x(t)+jy(t)\right)
-\]
+$$
 
-where \(x(t)\) and \(y(t)\) are generated from multiple sinusoidal components with randomly selected parameters.
+where $x(t)$ and $y(t)$ are generated from multiple sinusoidal components with randomly selected parameters.
 
 The magnitude of the channel coefficient is then calculated:
 
-\[
+$$
 |z(t)|
-\]
+$$
 
 and converted to a logarithmic representation:
 
-\[
+$$
 10\log_{10}(|z(t)|)
-\]
+$$
 
 The resulting signal is used as the time-series data for prediction.
 
@@ -338,15 +338,15 @@ The notebook contains a default training function configured for 50 epochs, whil
 
 The training objective is Mean Squared Error:
 
-\[
+$$
 MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{y}_i)^2
-\]
+$$
 
 where:
 
-- \(y_i\) is the actual fading value
-- \(\hat{y}_i\) is the predicted value
-- \(n\) is the number of samples
+- $y_i$ is the actual fading value
+- $\hat{y}_i$ is the predicted value
+- $n$ is the number of samples
 
 A lower MSE indicates a smaller average squared prediction error.
 
@@ -445,9 +445,9 @@ The notebook uses the following regression metrics:
 
 ## Mean Squared Error (MSE)
 
-\[
+$$
 MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{y}_i)^2
-\]
+$$
 
 MSE penalizes larger prediction errors more strongly because the errors are squared.
 
@@ -455,9 +455,9 @@ MSE penalizes larger prediction errors more strongly because the errors are squa
 
 ## Root Mean Squared Error (RMSE)
 
-\[
+$$
 RMSE = \sqrt{MSE}
-\]
+$$
 
 RMSE is expressed in the same units as the predicted variable.
 
@@ -465,9 +465,9 @@ RMSE is expressed in the same units as the predicted variable.
 
 ## Mean Absolute Error (MAE)
 
-\[
+$$
 MAE = \frac{1}{n}\sum_{i=1}^{n}|y_i-\hat{y}_i|
-\]
+$$
 
 MAE measures the average absolute difference between the predicted and actual values.
 
