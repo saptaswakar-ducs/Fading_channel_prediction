@@ -114,9 +114,10 @@ The simulation uses the following parameters:
 
 The velocity is converted from miles per hour to meters per second. The maximum Doppler shift is then calculated using:
 
-\[
+
+$$
 f_d = \frac{v f_c}{c}
-\]
+$$
 
 where:
 
